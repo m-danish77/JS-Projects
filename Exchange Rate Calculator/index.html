@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Rate Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../images/money.png" alt="" />
+      <h1>Exchange Rate Calculator</h1>
+    </header>
+    <div class="instruction">
+      Choose the currency and the amounts to get the exchange rate
+    </div>
+
+    <section>
+      <div class="first-section">
+        <select id="currency_one">
+          <option selected value="USD">USD - US Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+          <option value="NZD">NZD - New Zealand Dollar</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="PKR">PKR - Pakistani Rupee</option>
+          <option value="AED">AED - UAE Dirham</option>
+          <option value="SAR">SAR - Saudi Riyal</option>
+          <option value="QAR">QAR - Qatari Riyal</option>
+          <option value="KWD">KWD - Kuwaiti Dinar</option>
+          <option value="BHD">BHD - Bahraini Dinar</option>
+          <option value="OMR">OMR - Omani Rial</option>
+          <option value="TRY">TRY - Turkish Lira</option>
+          <option value="RUB">RUB - Russian Ruble</option>
+          <option value="KRW">KRW - South Korean Won</option>
+          <option value="THB">THB - Thai Baht</option>
+          <option value="MYR">MYR - Malaysian Ringgit</option>
+          <option value="IDR">IDR - Indonesian Rupiah</option>
+          <option value="PHP">PHP - Philippine Peso</option>
+          <option value="VND">VND - Vietnamese Dong</option>
+          <option value="BDT">BDT - Bangladeshi Taka</option>
+          <option value="LKR">LKR - Sri Lankan Rupee</option>
+          <option value="NPR">NPR - Nepalese Rupee</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+          <option value="NGN">NGN - Nigerian Naira</option>
+          <option value="EGP">EGP - Egyptian Pound</option>
+          <option value="KES">KES - Kenyan Shilling</option>
+          <option value="MXN">MXN - Mexican Peso</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="ARS">ARS - Argentine Peso</option>
+          <option value="CLP">CLP - Chilean Peso</option>
+          <option value="COP">COP - Colombian Peso</option>
+          <option value="SEK">SEK - Swedish Krona</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+          <option value="DKK">DKK - Danish Krone</option>
+          <option value="PLN">PLN - Polish Zloty</option>
+          <option value="CZK">CZK - Czech Koruna</option>
+          <option value="HUF">HUF - Hungarian Forint</option>
+          <option value="RON">RON - Romanian Leu</option>
+          <option value="UAH">UAH - Ukrainian Hryvnia</option>
+          <option value="ILS">ILS - Israeli Shekel</option>
+        </select>
+        <input
+          type="number"
+          id="amount_one"
+          placeholder="Enter Amount"
+          value="1"
+        />
+      </div>
+
+      <div class="second-section">
+        <button class="swap">Swap</button>
+        <div class="precise"></div>
+      </div>
+      <div class="third-section">
+        <select id="currency_two">
+          <option value="USD">USD - US Dollar</option>
+          <option selected value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+          <option value="NZD">NZD - New Zealand Dollar</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="PKR">PKR - Pakistani Rupee</option>
+          <option value="AED">AED - UAE Dirham</option>
+          <option value="SAR">SAR - Saudi Riyal</option>
+          <option value="QAR">QAR - Qatari Riyal</option>
+          <option value="KWD">KWD - Kuwaiti Dinar</option>
+          <option value="BHD">BHD - Bahraini Dinar</option>
+          <option value="OMR">OMR - Omani Rial</option>
+          <option value="TRY">TRY - Turkish Lira</option>
+          <option value="RUB">RUB - Russian Ruble</option>
+          <option value="KRW">KRW - South Korean Won</option>
+          <option value="THB">THB - Thai Baht</option>
+          <option value="MYR">MYR - Malaysian Ringgit</option>
+          <option value="IDR">IDR - Indonesian Rupiah</option>
+          <option value="PHP">PHP - Philippine Peso</option>
+          <option value="VND">VND - Vietnamese Dong</option>
+          <option value="BDT">BDT - Bangladeshi Taka</option>
+          <option value="LKR">LKR - Sri Lankan Rupee</option>
+          <option value="NPR">NPR - Nepalese Rupee</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+          <option value="NGN">NGN - Nigerian Naira</option>
+          <option value="EGP">EGP - Egyptian Pound</option>
+          <option value="KES">KES - Kenyan Shilling</option>
+          <option value="MXN">MXN - Mexican Peso</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="ARS">ARS - Argentine Peso</option>
+          <option value="CLP">CLP - Chilean Peso</option>
+          <option value="COP">COP - Colombian Peso</option>
+          <option value="SEK">SEK - Swedish Krona</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+          <option value="DKK">DKK - Danish Krone</option>
+          <option value="PLN">PLN - Polish Zloty</option>
+          <option value="CZK">CZK - Czech Koruna</option>
+          <option value="HUF">HUF - Hungarian Forint</option>
+          <option value="RON">RON - Romanian Leu</option>
+          <option value="UAH">UAH - Ukrainian Hryvnia</option>
+          <option value="ILS">ILS - Israeli Shekel</option>
+        </select>
+        <input type="number" id="amount_two" value="0.00" readonly />
+      </div>
+    </section>
+    <script defer src="script.js"></script>
+  </body>
+</html>
