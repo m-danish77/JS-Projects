@@ -1,0 +1,236 @@
+/* 1. Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything horizontally */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* 2. Header */
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* 3. Balance Section (Flexbox) */
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.balance span:first-child {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.balance span:last-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* 4. Income & Expense Section (Flexbox) */
+.income-expense {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.income,
+.expense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Makes them equal width */
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.income span:first-child,
+.expense span:first-child {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.income span:last-child {
+  color: #2ecc71; /* Green for income */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.expense span:last-child {
+  color: #e74c3c; /* Red for expense */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 5. History Section (Cards) */
+.history {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-right: 5px solid #ccc; /* Default border */
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateX(-2px); /* Slight hover effect */
+}
+
+/* These classes will be added by your JS later */
+.card.income {
+  border-right-color: #2ecc71;
+}
+.card.income .amount {
+  color: #2ecc71;
+}
+
+.card.expense {
+  border-right-color: #e74c3c;
+}
+.card.expense .amount {
+  color: #e74c3c;
+}
+
+.card .title {
+  font-weight: 500;
+  color: #34495e;
+}
+
+.card .amount {
+  font-weight: bold;
+}
+
+/* 6. Transactions Form (Container) */
+.transactions {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.transactions p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #2c3e50;
+}
+
+.transactions label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Styles the help text inside the Amount label */
+.transactions label span:last-child {
+  font-size: 0.75rem;
+  color: #95a5a6;
+  font-weight: normal;
+  display: block;
+  margin-top: 2px;
+}
+
+.transactions input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.transactions input:focus {
+  border-color: #3498db;
+}
+
+.transactions button {
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.transactions button:hover {
+  background-color: #2980b9;
+}
+
+.delBtn {
+  background-color: #e74c3c; /* Matches the red expense color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.delBtn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.delBtn:active {
+  transform: scale(0.95); /* Slight "press" effect when clicked */
+}
